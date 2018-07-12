@@ -1,0 +1,49 @@
+<div class="page" data-name="detail">
+    <div class="navbar">
+      <div class="navbar-inner sliding bg-color-green">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">返回</span>
+          </a>
+        </div>
+        <div class="title" id="title"><span class="text-color-black">{title}</span></div>
+      </div>
+    </div>
+    <div class="page-content hide-navbar-on-scroll">
+      <br>
+      <div class="card">
+          <div class="card-header">介紹說明</div>
+          <div class="card-content card-content-padding">
+              <p id="text">{text}</p>
+          </div>
+      </div>
+      <br>
+      <div class="card">
+          <div class="card-header">相關景點照片</div>
+          <div class="card-content card-content-padding">
+            <div class="swiper-container swiper-init">
+              <div class="swiper-wrapper" id="photos">
+                {photos}
+              </div>
+            </div>
+          </div>
+      </div>
+      <br>
+      <div class="card">
+        <div class="card-header">聯絡資訊</div>
+        <div class="card-content card-content-padding">
+            <p id="address">{address}</p>
+            <p id="website">{website}</p>
+        </div>
+      </div>
+      <br>
+      <div class="card">
+        <div class="card-header">地圖位置</div>
+        <div class="card-content card-content-padding">
+            <div id="map" style="height:600px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

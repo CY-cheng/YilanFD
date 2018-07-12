@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+  Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+          * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' * file:; 
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' 
+  https://*.gstatic.com https://*.googleapis.com;
+  style-src 'self' 'unsafe-inline' 'unsafe-eval'
+  *;
+  media-src *; 
+  img-src 'self' 'unsafe-inline' 'unsafe-eval'
+  * data: content:;
+  font-src 'self' data: fonts.gstatic.com;
+  ">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>宜蘭飲食</title>
+  <link rel="stylesheet" href="framework7/css/framework7.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="framework7/css/framework7.3dpanels.css">
+  <script src="framework7/js/framework7.3dpanels.js"></script>
+</head>
+<body class="color-theme-black">
+  <div id="app">
+      <div class="panel panel-left panel-reveal">
+          <div class="view">
+            <div class="page" >
+              <div class="page-content">
+                <div class="list">
+                    <div class="title"><center><big>選項列</big></center></div>
+                  <ul>
+                    <li>
+                      <a href="/" class="item-content item-link panel-close">
+                        <div class="item-inner">
+                          <div class="item-title">店家飲食</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/Introduction/" class="item-content item-link panel-close">
+                        <div class="item-inner">
+                          <div class="item-title">app 介紹</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/mapall/" class="item-content item-link panel-close">
+                        <div class="item-inner">
+                          <div class="item-title">店家位置總攬</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/ar/" class="item-content item-link panel-close">
+                        <div class="item-inner">
+                          <div class="item-title">AR導覽</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/about/" class="item-content item-link panel-close">
+                        <div class="item-inner">
+                          <div class="item-title">關於我們</div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <br><br>
+                <center><img src="img/app_logo.png" width="50%" height="50%"></center>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <div class="statusbar"></div>
+    <div class="views">
+      <div class="view view-main">
+        <div data-name="home" class="page">
+          <div class="navbar">
+            <div class="navbar-inner sliding">
+              <div class="title"><a class="panel-open tab-link tab-link-active" href="#"><i class="icon f7-icons">menu</i></a></div>
+              <div class="title">店家飲食</div>
+              <div class="subnavbar">
+                <form class="searchbar">
+                  <div class="searchbar-inner">
+                    <div class="searchbar-input-wrap">
+                      <input type="search" placeholder="搜尋">
+                      <i class="searchbar-icon"></i>
+                      <span class="input-clear-button"></span>
+                    </div>
+                    <span class="searchbar-disable-button">取消</span>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          
+          <div class="fab fab-left-bottom color-pink">
+              <a href="#">
+                <i class="icon f7-icons ios-only">add</i>
+                <i class="icon f7-icons ios-only">close</i>
+                <i class="icon material-icons md-only">add</i>
+                <i class="icon material-icons md-only">close</i>
+              </a>
+              <div class="fab-buttons fab-buttons-top">
+                <a href="#tab-5" class="tab-link fab-close" style="width: 60px;">新民路</a>
+                <a href="#tab-4" class="tab-link fab-close" style="width: 60px;">城隍街</a>
+                <a href="#tab-3" class="tab-link fab-close" style="width: 60px;">文昌路</a>
+                <a href="#tab-2" class="tab-link fab-close" style="width: 60px;">中山路</a>
+                <a href="#tab-1" class="tab-link fab-close tab-link-active" style="width: 60px;">小東路</a>
+              </div>
+              <div class="fab-buttons fab-buttons-top">
+                <a href="#tab-9" class="tab-link fab-close" style="left: 70px; width: 60px;">其他</a>
+                <a href="#tab-8" class="tab-link fab-close" style="left: 70px; width: 60px;">舊城北路</a>
+                <a href="#tab-7" class="tab-link fab-close" style="left: 70px; width: 60px;">聖後街</a>
+                <a href="#tab-6" class="tab-link fab-close" style="left: 70px; width: 60px;">新興路</a>
+              </div>
+            </div>
+          <div class="page-content hide-navbar-on-scroll">
+              <div class="searchbar-backdrop"></div>
+              <div class="list searchbar-found">
+                <div class="tabs">
+                  <div id="tab-1" class="page-content tab tab-active"style="top:-90px;">
+                    <ul id="item-list1">{items1}</ul>
+                  </div>
+                  <div id="tab-2" class="page-content tab"style="top:-90px;">
+                    <ul id="item-list2">{items2}</ul>
+                  </div>
+                  <div id="tab-3" class="page-content tab"style="top:-90px;">
+                    <ul id="item-list3">{items3}</ul>
+                  </div>
+                  <div id="tab-4" class="page-content tab"style="top:-90px;">
+                    <ul id="item-list4">{items4}</ul>
+                  </div>
+                  <div id="tab-5" class="page-content tab"style="top:-90px;">
+                    <ul id="item-list5">{items5}</ul>
+                  </div>
+                  <div id="tab-6" class="page-content tab"style="top:-90px;">
+                    <ul id="item-list6">{items6}</ul>
+                  </div>
+                  <div id="tab-7" class="page-content tab"style="top:-90px;">
+                    <ul id="item-list7">{items7}</ul>
+                  </div>
+                  <div id="tab-8" class="page-content tab"style="top:-90px;">
+                    <ul id="item-list8">{items8}</ul>
+                  </div>
+                  <div id="tab-9" class="page-content tab"style="top:-90px;">
+                    <ul id="item-list9">{items9}</ul>
+                  </div>
+                </div>
+              </div>
+              <div class="block searchbar-not-found">
+                <div class="block-inner">Nothing found</div>
+              </div>
+            </div>
+            <div class="list simple-list searchbar-not-found">
+              <ul>
+                <li>沒找到資料</li>
+              </ul>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>  
+  <script src="cordova.js"></script>
+  <script src="framework7/js/framework7.min.js"></script>
+  <script src="js/content-data.js"></script>
+  <script src="js/routes.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHqm-aoe4fiF7UlJGsUV3_pD9prYYMgIE"> </script>
+  <script src="js/app.js"></script>
+  <script src="js/index.js"></script>
+  <link rel="stylesheet" href="framework7/css/framework7.3dpanels.css">
+  <script src="framework7/js/framework7.3dpanels.js"></script>
+</body>
+</html>
